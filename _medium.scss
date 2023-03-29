@@ -1,0 +1,78 @@
+@use 'vars';
+
+@media screen and (min-width: 480px) {
+
+    %about-tile {
+        width: 85vw;
+        margin: 2vw;
+        padding: 3vw;
+        border-radius: 3vw;
+        text-align: justify;
+        font-size: 4vw;
+        box-shadow: 1vw 1vw 1vw rgba(0, 0, 0, 0.5);
+
+        h4 {
+            text-align: center;
+            padding: 1vw;
+            margin: 0;
+            font-size: 8vw;
+        }
+    }
+
+    .about-tile1,
+    .about-tile2,
+    .about-tile3,
+    .about-tile4 {
+        @extend %about-tile;
+    }
+
+    .back-button {
+        position: fixed;
+        width: 16vw;
+        height: 16vw;
+        border-radius: 8vw;
+        background-color: vars.$color-two;
+        box-shadow: 1vw 1vw 1vw rgba(0, 0, 0, 0.15);
+        bottom: 5vw;
+        left: 10vw;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 16vw;
+        font-size: 12vw;
+        font-weight: bold;
+    }
+
+    @mixin def-img() {
+        display: inline;
+        box-shadow: 1vw 1vw 1vw 1vw rgba(0, 0, 0, 0.15);
+        transition: transform 0.06s ease-in;
+        height: auto;
+    }
+
+    .mobile-img {
+        @include def-img;
+        text-align: center;
+        width: 40vw;
+        margin-left: 20vw;
+        padding: 1vw;
+        border-radius: 3vw;
+    }
+
+    .interests-img {
+        @include def-img;
+        float: right;
+        border-radius: 2vw;
+        padding: 1vw;
+        width: 30vw;
+        margin: 2vw;
+    }
+
+    .desktop-img {
+        @include def-img;
+        float: left;
+        border-radius: 0.5vw;
+        width: 40vw;
+        margin: 2vw;
+    }
+
+}

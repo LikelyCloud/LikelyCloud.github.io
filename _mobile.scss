@@ -1,0 +1,127 @@
+@use 'vars';
+
+h1 {
+    color: vars.$color-four;
+    text-align: center;
+    font-size: 10vw;
+    text-shadow: 1vw 1vw rgba(0, 0, 0, 0.15);
+}
+
+.back-button {
+    position: fixed;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 10vw;
+    background-color: vars.$color-two;
+    box-shadow: 1vw 1vw 1vw rgba(0, 0, 0, 0.15);
+    bottom: 5vw;
+    left: 10vw;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20vw;
+    font-size: 12vw;
+    font-weight: bold;
+}
+
+%about-tile {
+    width: 90vw;
+    margin: 3vw;
+    padding: 3vw;
+    border-radius: 3vw;
+    text-align: justify;
+    font-size: 6vw;
+    box-shadow: 1vw 1vw 1vw rgba(0, 0, 0, 0.5);
+
+    h4 {
+        text-align: center;
+        padding: 1vw;
+        margin: 0;
+        font-size: 8vw;
+    }
+}
+
+.about-tile1,
+.about-tile2,
+.about-tile3,
+.about-tile4 {
+    @extend %about-tile;
+}
+
+
+code {
+    font-size: 3vw;
+    text-align: left;
+    display: block;
+}
+
+%menu-tile {
+    height: 40vw;
+    width: 90vw;
+    margin: 3vw;
+    border-radius: 3vw;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40vw;
+    font-size: 10vw;
+    cursor: pointer;
+    box-shadow: 1vw 1vw 1vw rgba(0, 0, 0, 0.5);
+}
+
+#menu-tile1,
+#menu-tile2,
+#menu-tile3,
+#menu-tile4 {
+    @extend %menu-tile;
+}
+
+#menu-tile3,
+.about-tile3 {
+    background-color: vars.$color-three;
+}
+
+#menu-tile1,
+.about-tile1 {
+    background-color: vars.$color-one;
+}
+
+#menu-tile4,
+.about-tile4 {
+    background-color: vars.$color-four;
+}
+
+#menu-tile2,
+.about-tile2 {
+    background-color: vars.$color-two;
+}
+
+.face-image {
+    display: block;
+    margin-left: 5vw;
+    margin-top: 5vw;
+    width: auto;
+    height: 40vw;
+    border-radius: 3vw;
+}
+
+.desktop-img,
+.project-img,
+.interests-img,
+.desktop-info,
+.about-img,
+.about-interests,
+.face-img,
+.info-list {
+    display: none;
+}
+
+.mobile-img {
+    display: inline;
+    text-align: center;
+    width: 50vw;
+    height: auto;
+    margin-left: 15vw;
+    padding: 1vw;
+    border-radius: 3vw;
+    box-shadow: 1vw 1vw 1vw 1vw rgba(0, 0, 0, 0.15);
+    transition: transform 0.06s ease-in;
+}
