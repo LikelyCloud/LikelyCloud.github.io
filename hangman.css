@@ -1,0 +1,216 @@
+@media screen and (max-width: 480px) {
+  .flex-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #F2D5A0;
+    width: 80vw;
+    height: 160vw;
+    margin: auto;
+    border-radius: 2vw;
+    box-shadow: 0.5vw 0.5vw 0.5vw #A65644;
+  }
+  #letter-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1vw;
+  }
+  .letter {
+    background: linear-gradient(to right, #F2D5A0 50%, #D9AB73 50%) left;
+    background-size: 200%;
+    border: 0.4vw solid #A65644;
+    border-radius: 0.5vw;
+    font-family: "Pacifico", cursive;
+    font-size: 5vw;
+    height: 8vw;
+    width: 8vw;
+    padding: auto;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+    padding: 0.5vw;
+    text-align: center;
+    margin: 0.5vw;
+  }
+  .letter:hover {
+    background-position: right;
+  }
+  .light-blue {
+    background: #6393A6;
+  }
+  #new-game {
+    align-self: center;
+    background-color: #F2D5A0;
+    background: linear-gradient(to right, #F2D5A0 50%, #D9AB73 50%) left;
+    background-size: 200%;
+    border: 0.4vw solid #A65644;
+    border-radius: 0.5vw;
+    font-family: "Pacifico", cursive;
+    font-size: 8vw;
+    height: 18vw;
+    width: 90%;
+    padding: 0.5vw;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+    margin: 0.5vw 2vw 2vw 2vw;
+  }
+  #new-game:hover {
+    background-position: right;
+  }
+  #canvas-password {
+    display: flex;
+    flex-direction: column;
+  }
+  #canvas {
+    width: 90%;
+    height: 60vw;
+    background-color: white;
+    border: 0.4vw solid #A65644;
+    border-radius: 2vw;
+    margin: 4vw auto 2vw auto;
+  }
+  #password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 20vw;
+    margin: 2vw auto 2vw auto;
+    border: 0.4vw solid #A65644;
+    border-radius: 2vw;
+  }
+  #password-content {
+    display: block;
+    font-family: "Pacifico", cursive;
+    font-size: 8vw;
+  }
+  #prompt {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rebeccapurple;
+    width: 30vw;
+    height: 20vw;
+    left: 50%;
+    top: 50%;
+    border: 0.4vw solid #A65644;
+    border-radius: 2vw;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+}
+@media screen and (min-width: 480px) {
+  .flex-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #F2D5A0;
+    width: 70vw;
+    height: 45vw;
+    margin: auto;
+    border-radius: 2vw;
+    box-shadow: 0.5vw 0.5vw 0.5vw #A65644;
+  }
+  #letter-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1vw;
+  }
+  .letter {
+    background: linear-gradient(to right, #F2D5A0 50%, #D9AB73 50%) left;
+    background-size: 200%;
+    border: 0.4vw solid #A65644;
+    border-radius: 0.5vw;
+    font-family: "Pacifico", cursive;
+    font-size: 1.5vw;
+    height: 2vw;
+    width: 2vw;
+    padding: auto;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+    padding: 0.5vw;
+    text-align: center;
+    margin: 0.5vw;
+  }
+  .letter:hover {
+    background-position: right;
+  }
+  .light-blue {
+    background: #6393A6;
+  }
+  #new-game {
+    align-self: center;
+    background-color: #F2D5A0;
+    background: linear-gradient(to right, #F2D5A0 50%, #D9AB73 50%) left;
+    background-size: 200%;
+    border: 0.4vw solid #A65644;
+    border-radius: 0.5vw;
+    font-family: "Pacifico", cursive;
+    font-size: 2vw;
+    height: auto;
+    width: 20vw;
+    padding: 0.5vw;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+    margin: 0.5vw 2vw 2vw 2vw;
+  }
+  #new-game:hover {
+    background-position: right;
+  }
+  #canvas-password {
+    display: flex;
+  }
+  #canvas {
+    width: 20vw;
+    height: 20vw;
+    background-color: white;
+    border: 0.4vw solid #A65644;
+    border-radius: 2vw;
+    margin: 2vw 2vw 2vw 3.5vw;
+  }
+  #password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20vw;
+    margin: 2vw 3.5vw 2vw 2vw;
+    border: 0.4vw solid #A65644;
+    border-radius: 2vw;
+  }
+  #password-content {
+    display: block;
+    font-family: "Pacifico", cursive;
+    font-size: 3.5vw;
+  }
+  #prompt {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rebeccapurple;
+    width: 30vw;
+    height: 20vw;
+    left: 50%;
+    top: 50%;
+    border: 0.4vw solid #A65644;
+    border-radius: 2vw;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+}
+body {
+  background-color: #D9AB73;
+}
+
+/*# sourceMappingURL=style.css.map */
