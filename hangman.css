@@ -44,6 +44,7 @@
     background: #6393A6;
   }
   #new-game {
+    color: black;
     align-self: center;
     background-color: #F2D5A0;
     background: linear-gradient(to right, #F2D5A0 50%, #D9AB73 50%) left;
