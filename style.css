@@ -118,6 +118,17 @@ code {
     transition: transform 0.06s ease-in;
 }
 
+.gallery-img {
+    height: auto;
+    box-shadow: 1vw 1vw 1vw 1vw rgba(0, 0, 0, 0.15);
+    transition: transform 0.06s ease-in;
+    display: inline;
+    float: left;
+    border-radius: 0.5vw;
+    width: 80vw;
+    margin: 4vw;
+}
+
 @media screen and (min-width: 480px) {
 
     .about-tile1,
@@ -263,6 +274,18 @@ code {
         margin: 2vw;
     }
 
+    .gallery-img {
+        height: auto;
+        box-shadow: 1vw 1vw 1vw 1vw rgba(0, 0, 0, 0.15);
+        transition: transform 0.06s ease-in;
+        display: inline;
+        float: left;
+        border-radius: 0.5vw;
+        width: 40vw;
+        margin: 2vw;
+    }
+
+    .gallery-img:hover,
     .desktop-img:hover,
     .project-img:hover,
     .interests-img:hover,
