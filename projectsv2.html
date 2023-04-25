@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="menu.js" async></script>
+</head>
+
+<body>
+    <h1>Projects</h1>
+    <div class="flex-container">
+        <section class="about-tile4">
+            <h4>Chinese checkers</h4>
+            <img class="project-img" src="imgs/checkers-free.jpeg" alt="chinese-checkers">
+            <p>
+                Chinese checkers is a strategy board game that can be played by two, three, four, or six
+                people. The objective is to be first to race all of one's pieces
+                across the hexagram-shaped board into the corner of the star opposite one's starting corner using
+                single-step moves or moves that jump over other pieces.
+            </p>
+            <p>
+                Our task was to implement the game in a client-server Java application. Code below shows an
+                implementation
+                of a method that paints the game board in the app window.
+            </p>
+            <code>
+                public void paint(Graphics g){<br>
+                    &emsp;Graphics2D g2d = (Graphics2D) g;<br><br>
+
+                    &emsp;g2d.setPaint(passButton.getColor());<br>
+                    &emsp;g2d.fill(passButton);<br><br>
+
+                    &emsp;for (int i = 0; i &lt; 17; ++i) {<br>
+                        &emsp;&emsp;for (int j = 0; j &lt; 25; ++j) {<br>
+                            &emsp;&emsp;&emsp;tempField = map.getField(i, j);<br>
+                            &emsp;&emsp;&emsp;if (tempField.isEnabled()) {<br>
+                                &emsp;&emsp;&emsp;&emsp;g2d.setPaint(tempField.getColor());<br>
+                                &emsp;&emsp;&emsp;&emsp;g2d.fill(tempField);<br>
+                                &emsp;&emsp;&emsp;}<br>
+                                &emsp;&emsp;}<br>
+                                &emsp;}<br>
+                }
+            </code>
+        </section>
+        <section class="about-tile1">
+            <h4>Haskell monads</h4>
+            <img class="project-img" src="imgs/hask.jpeg" alt="haskell">
+            <p>
+                Functional Programming was one of the most interesting courses I took last term. Particularly
+                interesting
+                was the lecture about monads. Code below shows a simple implementation of a point as a monad.
+                <!--Implementation of a point as a monad written in Haskell as an assignment for subject Functional
+                Programming.-->
+            </p>
+
+            <code>
+                    newtype Pkt a = Pkt (a, a)<br><br>
+
+                    instance Functor Pkt where<br>
+                    fmap :: (a -> b) -> Pkt a -> Pkt b<br>
+                    fmap f (Pkt (x, y)) = Pkt (f x, f y)<br><br>
+
+                    instance Applicative Pkt where<br>
+                    pure :: a -> Pkt a<br>
+                    pure x = Pkt (x, x)<br>
+                    (&lt;*>) :: Pkt (a -> b) -> Pkt a -> Pkt b<br>
+                    Pkt (f, g) &lt;*> Pkt (x, y) = Pkt (f x, g y)<br><br>
+
+                    instance Monad Pkt where<br>
+                    return :: a -> Pkt a<br>
+                    return = pure<br>
+                    (>>=) :: Pkt a -> (a -> Pkt b) -> Pkt b<br>
+                    Pkt (x, y) >>= f =<br>
+                    &emsp;&emsp;&emsp;&emsp;let Pkt (m, _) = f x<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Pkt (_, n) = f y<br>
+                            &emsp;&emsp;&emsp;&emsp;in Pkt (m, n)<br>
+                </code>
+
+        </section>
+        <section class="about-tile2">
+            <h4>Compiler</h4>
+            <img class="project-img" src="imgs/compiler.jpeg" alt=" compiler">
+            <p>
+                Simple compiler written as an assignment for subject Formal Languages and Translation Theory. Compiler
+                translates simple language into assembly code. Code sample below generates
+                assembly code for adding two variables.
+            </p>
+            <code>
+                    if instr[2][0] == "ADD":<br>
+                    &emsp;if instr[2][1][0] == "ID":<br>
+                    &emsp;&emsp;self.check_variable(instr[2][1][1])<br>
+                    &emsp;&emsp;if instr[2][2][0] == "ID":  # ID + ID<br>
+                    &emsp;&emsp;&emsp;self.check_variable(instr[2][2][1])<br>
+                    &emsp;&emsp;&emsp;self.load_variable(instr[2][1][1])<br>
+                    &emsp;&emsp;&emsp;self.add_variable(instr[2][2][1])<br>
+                    &emsp;elif instr[2][2][0] == "NUM":  # ID + NUM<br>
+                    &emsp;&emsp;&emsp;self.code.append(f"SET {instr[2][2][1]}")<br>
+                    &emsp;&emsp;&emsp;self.add_variable(instr[2][1][1])<br>
+                    &emsp;elif instr[2][1][0] == "NUM":<br>
+                    &emsp;&emsp;if instr[2][2][0] == "ID":  # NUM + ID<br>
+                    &emsp;&emsp;&emsp;self.check_variable(instr[2][2][1])<br>
+                    &emsp;&emsp;&emsp;self.code.append(f"SET {instr[2][1][1]}")<br>
+                    &emsp;&emsp;&emsp;self.add_variable(instr[2][2][1])<br>
+                    &emsp;&emsp;elif instr[2][2][0] == "NUM":  # NUM + NUM<br>
+                    &emsp;&emsp;&emsp;self.code.append(<br>
+                    &emsp;&emsp;&emsp;&emsp;f"SET {instr[2][1][1] + instr[2][2][1]}")<br>
+            </code>
+
+        </section>
+    </div>
+    <a href="index.html">
+        <div class="back-button">&#8592;</div>
+    </a>
+
+    <ul class="up-menu">
+        <li class="up-elem"><a href="aboutv2.html">About me</a></li>
+        <li class="up-elem"><a href="projectsv2.html">My projects</a></li>
+        <li class="up-elem"><a href="interestsv2.html">Interests</a></li>
+        <li class="up-elem"><a href="hobbiesv2.html">Hobbies</a></li>
+        <li class="up-elem"><a href="galleryv2.html">Gallery</a></li>
+    </ul>
+
+    <a href="index.html">
+        <div class="back-button">&#8592;</div>
+    </a>
+    <button class="hamburger">
+        <i>menu</i>
+        <i class="close-icon">close</i>
+    </button>
+</body>
+
+</html>
