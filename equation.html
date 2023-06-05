@@ -8,12 +8,33 @@
     <title>Equation</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
 <body>
-    \[ f(x) = \frac{1}{\sigma\sqrt{2\pi}}
-    \exp\left( -\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{\!2}\,\right) \]
+    <div class="flex-container">
+        <div class="about-tile1">
+            <h4>Rozkład normalny</h4>
+            <p>
+                Jeden z najważniejszych rozkładów prawdopodobieństwa, odgrywający ważną rolę w
+                statystyce. Wykres funkcji prawdopodobieństwa tego rozkładu jest krzywą w kształcie dzwonu.
+            </p>
+
+            <p>
+                Funkcja gęstości prawdopodobieństwa rozkładu normalnego ze średnią \( \mu \) i odchyleniem standardowym
+                \( \sigma \) dana jest wzorem:
+                \[ f(x)_{\mu, \sigma} = \frac{1}{\sigma\sqrt{2\pi}}
+                e^ {\frac{- (x - \mu)^2}{2 \sigma ^ 2}} \]
+            </p>
+
+            <p>
+                Dystrybuanta rozkładu normalnego dana jest wzorem:
+                \[ P(X \leq x) = \int_{-\infty}^x\frac{1}{\sigma\sqrt{2\pi}}
+                e^ {\frac{- (u - \mu)^2}{2 \sigma ^ 2}}du \]
+            </p>
+        </div>
+    </div>
 </body>
 
 </html>
